@@ -175,10 +175,10 @@ function App() {
         : 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 text-slate-900'
     }`}>
       {/* Header / Navigation */}
-      <header className={`sticky top-0 z-50 backdrop-blur-sm border-b transition-colors duration-300 w-full ${
+      <header className={`sticky top-0 z-50 w-full border-b transition-colors duration-300 backdrop-blur-lg bg-white/40 dark:bg-slate-900/40 shadow-lg ${
         isDarkMode 
-          ? 'bg-slate-900/95 border-purple-500/30' 
-          : 'bg-white/95 border-purple-200'
+          ? 'border-purple-500/30' 
+          : 'border-purple-200'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
