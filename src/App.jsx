@@ -439,7 +439,7 @@ function App() {
                 <div>
                   <h3 className={`text-xl lg:text-2xl font-bold mb-3 ${
                     isDarkMode ? 'text-white' : 'text-slate-900'
-                  }`}>🎯 Student-Centric Career Development</h3>
+                  }`}>Student-Centric Career Development</h3>
                 </div>
               </div>
               <p className={`leading-relaxed ${
@@ -466,7 +466,7 @@ function App() {
                 <div>
                   <h3 className={`text-xl lg:text-2xl font-bold mb-3 ${
                     isDarkMode ? 'text-white' : 'text-slate-900'
-                  }`}>👥 Career Mentorship Beyond Competitions</h3>
+                  }`}>Career Mentorship Beyond Competitions</h3>
                 </div>
               </div>
               <p className={`leading-relaxed ${
@@ -493,7 +493,7 @@ function App() {
                 <div>
                   <h3 className={`text-xl lg:text-2xl font-bold mb-3 ${
                     isDarkMode ? 'text-white' : 'text-slate-900'
-                  }`}>🚀 Peer & Alumni Mentorship</h3>
+                  }`}>Peer & Alumni Mentorship</h3>
                 </div>
               </div>
               <p className={`leading-relaxed ${
@@ -520,7 +520,7 @@ function App() {
                 <div>
                   <h3 className={`text-xl lg:text-2xl font-bold mb-3 ${
                     isDarkMode ? 'text-white' : 'text-slate-900'
-                  }`}>✨ Bridging the Semester Gap</h3>
+                  }`}>Bridging the Semester Gap</h3>
                 </div>
               </div>
               <p className={`leading-relaxed ${
@@ -547,7 +547,7 @@ function App() {
                 <div>
                   <h3 className={`text-xl lg:text-2xl font-bold mb-3 ${
                     isDarkMode ? 'text-white' : 'text-slate-900'
-                  }`}>⭐ Empowering Freshers Early On</h3>
+                  }`}>Empowering Freshers Early On</h3>
                 </div>
               </div>
               <p className={`leading-relaxed ${
@@ -574,7 +574,7 @@ function App() {
                 <div>
                   <h3 className={`text-xl lg:text-2xl font-bold mb-3 ${
                     isDarkMode ? 'text-white' : 'text-slate-900'
-                  }`}>💡 FROST Replacement with Broader Scope</h3>
+                  }`}>FROST Replacement with Broader Scope</h3>
                 </div>
               </div>
               <p className={`leading-relaxed ${
