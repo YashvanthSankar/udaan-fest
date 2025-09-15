@@ -7,7 +7,7 @@ import './App.css'
 function App() {
   const [activeAccordion, setActiveAccordion] = useState(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true)
 
   // Toggle dark mode
   const toggleDarkMode = () => {
@@ -834,18 +834,18 @@ function App() {
           variants={fadeInUp}
         >
           {/* Day & Date Circle */}
-<div className="flex items-center justify-center absolute -left-4 top-0 w-12 h-12 rounded-full z-10 lg:static lg:w-24 lg:h-24 lg:mx-auto lg:order-2 lg:flex-shrink-0">
-  <div className={`text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-3 transition-colors ${
+<div className="flex flex-col items-center absolute -left-4 top-0 w-12 h-auto rounded-full z-10 lg:static lg:w-24 lg:h-24 lg:mx-auto lg:order-2 lg:flex-shrink-0">
+  <div className={`text-white rounded-full w-10 h-10 flex items-center justify-center font-bold transition-colors mb-2 ${
     isDarkMode 
       ? 'bg-gradient-to-br from-purple-600 to-pink-600' 
       : 'bg-gradient-to-br from-purple-500 to-pink-500'
-  } lg:w-16 lg:h-16 lg:mr-0`}>
+  } lg:w-16 lg:h-16 lg:mb-0`}>
     {day.day.charAt(0)}
   </div>
-  <div className="hidden lg:block text-center mt-2">
-    <p className={`text-xl font-bold ${
+  <div className="block text-center">
+    <p className={`text-xs font-bold ${
       isDarkMode ? 'text-white' : 'text-slate-900'
-    }`}>{day.day}</p>
+    }`}>{day.day} - {new Date(2025, 0, 13 + dayIndex).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</p>
   </div>
 </div>
           
@@ -1021,10 +1021,10 @@ function App() {
                       <p className={`font-bold text-lg mb-2 ${
                         isDarkMode ? 'text-white' : 'text-slate-900'
                       }`}>Social Media:</p>
-                      <div className="flex space-x-4">
+                      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full">
                         <a 
                           href="#" 
-                          className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center space-x-2 ${
+                          className={`w-full sm:w-auto px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 ${
                             isDarkMode 
                               ? 'bg-purple-800/50 text-purple-300 hover:bg-purple-700' 
                               : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
@@ -1035,7 +1035,7 @@ function App() {
                         </a>
                         <a 
                           href="#" 
-                          className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center space-x-2 ${
+                          className={`w-full sm:w-auto px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 ${
                             isDarkMode 
                               ? 'bg-blue-800/50 text-blue-300 hover:bg-blue-700' 
                               : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
