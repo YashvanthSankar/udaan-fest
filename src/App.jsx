@@ -349,7 +349,7 @@ function App() {
             variants={fadeInUp}
           >
             UDAAN –{' '}
-            <span className={`block bg-gradient-to-r bg-clip-text text-transparent animate-pulse ${
+            <span className={`block bg-gradient-to-r bg-clip-text text-transparent gradient-shimmer ${
               isDarkMode 
                 ? 'from-purple-400 via-pink-400 to-yellow-400' 
                 : 'from-purple-600 via-pink-600 to-orange-500'
@@ -599,7 +599,6 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <motion.div className="text-center mb-16" variants={fadeInUp}>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-              <span className="text-4xl md:text-5xl">🎯</span> 
               <span className={`${
                 isDarkMode 
                   ? 'bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent' 
@@ -692,7 +691,6 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <motion.div className="text-center mb-16" variants={fadeInUp}>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-              <span className="text-4xl md:text-5xl">🎪</span> 
               <span className={`${
                 isDarkMode 
                   ? 'bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent' 
@@ -759,7 +757,7 @@ function App() {
           <motion.div className="mt-16" variants={fadeInUp}>
             <h3 className={`text-2xl font-bold mb-8 text-center ${
               isDarkMode ? 'text-purple-300' : 'text-purple-700'
-            }`}>✨ Additional Events</h3>
+            }`}>Additional Events</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {additionalEvents.map((event, index) => (
                 <motion.div 
@@ -798,7 +796,6 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <motion.div className="text-center mb-16" variants={fadeInUp}>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-              <span className="text-4xl md:text-5xl">📅</span> 
               <span className={`${
                 isDarkMode 
                   ? 'bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent' 
@@ -917,7 +914,7 @@ function App() {
               isDarkMode 
                 ? 'bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent' 
                 : 'bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-transparent'
-            }`}>🤝 Sponsors & Contact</h2>
+            }`}>Sponsors & Contact</h2>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
