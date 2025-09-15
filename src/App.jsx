@@ -7,7 +7,7 @@ import './App.css'
 function App() {
   const [activeAccordion, setActiveAccordion] = useState(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true)
 
   // Toggle dark mode
   const toggleDarkMode = () => {
@@ -1015,10 +1015,10 @@ function App() {
                       <p className={`font-bold text-lg mb-2 ${
                         isDarkMode ? 'text-white' : 'text-slate-900'
                       }`}>Social Media:</p>
-                      <div className="flex space-x-4">
+                      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full">
                         <a 
                           href="#" 
-                          className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center space-x-2 ${
+                          className={`w-full sm:w-auto px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 ${
                             isDarkMode 
                               ? 'bg-purple-800/50 text-purple-300 hover:bg-purple-700' 
                               : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
@@ -1029,7 +1029,7 @@ function App() {
                         </a>
                         <a 
                           href="#" 
-                          className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center space-x-2 ${
+                          className={`w-full sm:w-auto px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 ${
                             isDarkMode 
                               ? 'bg-blue-800/50 text-blue-300 hover:bg-blue-700' 
                               : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
