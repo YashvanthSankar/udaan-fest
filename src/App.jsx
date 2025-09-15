@@ -128,44 +128,60 @@ function App() {
     {
       day: "Monday",
       events: [
-        { time: "09:00 AM", event: "Opening Ceremony & Welcome" },
-        { time: "10:30 AM", event: "Masterclass #1: AI & ML" },
-        { time: "02:00 PM", event: "Career Panel: Tech Industry" },
-        { time: "04:00 PM", event: "Networking Session" }
+        { time: "08:00-09:00 PM", event: "Opening Keynote" },
+         { time: "09:00-11:00 PM", event: "MasterClass #7:Business Communication " }
+       
+       
       ]
     },
     {
       day: "Tuesday", 
       events: [
-        { time: "09:30 AM", event: "Masterclass #2: Quantitative Finance" },
-        { time: "01:00 PM", event: "Resume Review Clinic" },
-        { time: "03:30 PM", event: "Mock Interview Sessions" }
+              { time: "08:00-11:00 PM", event: "Masterclass #1: AI & ML" }
       ]
     },
     {
       day: "Wednesday",
       events: [
-        { time: "10:00 AM", event: "Masterclass #3: Digital System Design" },
-        { time: "02:30 PM", event: "Career Panel: Finance & Consulting" },
-        { time: "04:30 PM", event: "Career Guidance Workshop" }
+         { time: "08:00-11:00 PM", event: "Masterclass #2: Quant Finance & Trading" }
       ]
     },
     {
       day: "Thursday",
       events: [
-        { time: "09:00 AM", event: "Masterclass #4: Generative AI" },
-        { time: "01:30 PM", event: "Masterclass #5: Blockchain & Web3" },
-        { time: "04:00 PM", event: "Alumni Networking" }
+       { time: "08:00-11:00 PM", event: "Masterclass #3: VLSI SOC Design" }
+      
       ]
     },
     {
       day: "Friday",
       events: [
-        { time: "10:00 AM", event: "Masterclass #6: UI/UX Design" },
-        { time: "02:00 PM", event: "Masterclass #7: Communication Skills" },
-        { time: "04:30 PM", event: "Closing Ceremony & Awards" }
+        { time: "08:00-11:00 PM", event: "Masterclass #4: Generative AI & Prompt Tuning" }
+      ]
+    },
+     {
+      day: "Saturday",
+      events: [
+        { time: "FULL DAY", event: "Innovation Expo and Open House" },
+        { time: "10:00 AM-01:00 PM", event: "Masterclass #6: 3D Modeling & CAD/CAM" },
+        { time: "03:00-05:00 PM", event: "Competitive Programming Hackathon" },
+        { time: "04:00-06:00 PM", event: "Speaker Session: MBA/UPSC/GATE Unlocked" },
+        { time: "08:00-10:00 PM", event: "Global Careers Forum" }
+
+      ]
+    },
+      {
+      day: "Sunday",
+      events: [
+        { time: "FULL DAY", event: "1V1 Career Guidance Clinics" },
+        { time: "10:00 AM-01:00 PM", event: "Masterclass #5: Blockchain & Web3 Dev" },
+        { time: "03:00-05:00 PM", event: "Case Competition" },
+        { time: "04:00-06:00 PM", event: "Alumni Resume Review & Interview Strategies" },
+        { time: "08:00-10:00 PM", event: "Panel Discussion" }
+
       ]
     }
+    
   ]
 
   return (
@@ -206,7 +222,7 @@ function App() {
               }`}>Events</a>
               <a href="#schedule" className={`transition-colors font-medium ${
                 isDarkMode ? 'text-gray-300 hover:text-purple-400' : 'text-gray-700 hover:text-purple-600'
-              }`}>Schedule</a>
+              }`}>Timeline</a>
               <a href="#contact" className={`transition-colors font-medium ${
                 isDarkMode ? 'text-gray-300 hover:text-purple-400' : 'text-gray-700 hover:text-purple-600'
               }`}>Contact</a>
@@ -314,7 +330,7 @@ function App() {
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Schedule
+                  Timeline
                 </a>
                 <a 
                   href="#contact" 
@@ -561,8 +577,7 @@ function App() {
                   ? 'bg-slate-800/50 border-purple-500/30 hover:bg-slate-800' 
                   : 'bg-white/70 border-purple-200 hover:bg-white backdrop-blur-sm'
               }`}
-              variants={fadeInUp}
-            >
+              variants={fadeInUp}>
               <div className="flex items-start mb-6">
                 <div className={`flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center mr-6 transition-colors ${
                   isDarkMode 
@@ -781,123 +796,101 @@ function App() {
           </motion.div>
         </div>
       </motion.section>
-
       {/* Schedule Section */}
-      <motion.section 
-        id="schedule" 
-        className={`py-24 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 w-full transition-colors duration-300 ${
-          isDarkMode ? 'bg-slate-900' : 'bg-blue-50'
-        }`}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={staggerContainer}
-      >
-        <div className="max-w-6xl mx-auto">
-          <motion.div className="text-center mb-16" variants={fadeInUp}>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-              <span className={`${
-                isDarkMode 
-                  ? 'bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent' 
-                  : 'bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-transparent'
-              }`}>Weekly Schedule</span>
-            </h2>
-            <p className={`text-xl ${
-              isDarkMode ? 'text-purple-200' : 'text-purple-700'
-            }`}>Your journey through UDAAN week</p>
-          </motion.div>
+<motion.section 
+  id="schedule" 
+  className={`py-24 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 w-full transition-colors duration-300 ${
+    isDarkMode ? 'bg-slate-900' : 'bg-blue-50'
+  }`}
+  initial="initial"
+  whileInView="animate"
+  viewport={{ once: true, margin: "-100px" }}
+  variants={staggerContainer}
+>
+  <div className="max-w-6xl mx-auto">
+    <motion.div className="text-center mb-16" variants={fadeInUp}>
+      <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
+        <span className={`${
+          isDarkMode 
+            ? 'bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent' 
+            : 'bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-transparent'
+        }`}>Weekly Schedule</span>
+      </h2>
+      <p className={`text-xl ${
+        isDarkMode ? 'text-purple-200' : 'text-purple-700'
+      }`}>Your journey through UDAAN week</p>
+    </motion.div>
 
-          <motion.div 
-            className={`rounded-xl overflow-hidden shadow-xl border ${
-              isDarkMode 
-                ? 'bg-slate-800/50 border-purple-500/30' 
-                : 'bg-white/90 border-purple-200 backdrop-blur-sm'
-            }`} 
-            variants={fadeInUp}
-          >
-            <div className={`text-white p-6 ${
-              isDarkMode 
-                ? 'bg-gradient-to-r from-purple-700 to-pink-700' 
-                : 'bg-gradient-to-r from-purple-600 to-pink-600'
-            }`}>
-              <h3 className="text-2xl font-bold text-center">UDAAN 2025 Schedule</h3>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead className={`${
-                  isDarkMode ? 'bg-purple-900/50' : 'bg-purple-50'
-                }`}>
-                  <tr>
-                    <th className={`px-4 py-4 text-left text-sm font-semibold uppercase tracking-wider w-1/4 ${
-                      isDarkMode ? 'text-purple-300' : 'text-purple-800'
-                    }`}>Day</th>
-                    <th className={`px-4 py-4 text-left text-sm font-semibold uppercase tracking-wider w-1/4 ${
-                      isDarkMode ? 'text-purple-300' : 'text-purple-800'
-                    }`}>Time</th>
-                    <th className={`px-4 py-4 text-left text-sm font-semibold uppercase tracking-wider w-1/2 ${
-                      isDarkMode ? 'text-purple-300' : 'text-purple-800'
-                    }`}>Event</th>
-                  </tr>
-                </thead>
-                <tbody className={`divide-y ${
-                  isDarkMode ? 'divide-purple-500/30' : 'divide-gray-200'
-                }`}>
-                  {schedule.map((day, dayIndex) => 
-                    day.events.map((event, eventIndex) => (
-                      <tr key={`${dayIndex}-${eventIndex}`} className={`transition-colors ${
-                        isDarkMode 
-                          ? `hover:bg-purple-800/30 ${
-                              dayIndex % 2 === 0 ? 'bg-slate-700/30' : 'bg-slate-800/30'
-                            }` 
-                          : `hover:bg-purple-50 ${
-                              dayIndex % 2 === 0 ? 'bg-purple-25' : 'bg-white'
-                            }`
-                      }`}>
-                        {eventIndex === 0 && (
-                          <td className="px-4 py-4 whitespace-nowrap align-top" rowSpan={day.events.length}>
-                            <div className="flex items-center">
-                              <div className={`text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-3 ${
-                                isDarkMode 
-                                  ? 'bg-gradient-to-br from-purple-600 to-pink-600' 
-                                  : 'bg-gradient-to-br from-purple-500 to-pink-500'
-                              }`}>
-                                {day.day.charAt(0)}
-                              </div>
-                              <div>
-                                <div className={`text-sm font-medium ${
-                                  isDarkMode ? 'text-white' : 'text-gray-900'
-                                }`}>{day.day}</div>
-                                <div className={`text-sm ${
-                                  isDarkMode ? 'text-purple-300' : 'text-gray-500'
-                                }`}>
-                                  {new Date(2025, 0, 13 + dayIndex).toLocaleDateString('en-US', { 
-                                    month: 'short', 
-                                    day: 'numeric' 
-                                  })}
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        )}
-                        <td className="px-4 py-4 whitespace-nowrap align-top">
-                          <div className={`text-sm font-medium ${
-                            isDarkMode ? 'text-purple-300' : 'text-gray-900'
-                          }`}>{event.time}</div>
-                        </td>
-                        <td className="px-4 py-4 align-top">
-                          <span className={`font-medium ${
-                            isDarkMode ? 'text-gray-200' : 'text-gray-800'
-                          }`}>{event.event}</span>
-                        </td>
-                      </tr>
-                    ))
-                  )}
-                </tbody>
-              </table>
-            </div>
-          </motion.div>
-        </div>
-      </motion.section>
+    <div className="relative space-y-8 lg:space-y-12 pl-8 lg:pl-0">
+      {/* Vertical Timeline Line */}
+      <div className={`absolute left-4 top-0 bottom-0 w-1 transition-colors ${
+        isDarkMode ? 'bg-purple-500/30' : 'bg-purple-200'
+      } lg:left-1/2 lg:-translate-x-1/2`}></div>
+      
+      {schedule.map((day, dayIndex) => (
+        <motion.div 
+          key={dayIndex} 
+          className="relative lg:flex items-start lg:odd:flex-row-reverse"
+          variants={fadeInUp}
+        >
+          {/* Day & Date Circle */}
+<div className="flex items-center justify-center absolute -left-4 top-0 w-12 h-12 rounded-full z-10 lg:static lg:w-24 lg:h-24 lg:mx-auto lg:order-2 lg:flex-shrink-0">
+  <div className={`text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-3 transition-colors ${
+    isDarkMode 
+      ? 'bg-gradient-to-br from-purple-600 to-pink-600' 
+      : 'bg-gradient-to-br from-purple-500 to-pink-500'
+  } lg:w-16 lg:h-16 lg:mr-0`}>
+    {day.day.charAt(0)}
+  </div>
+  <div className="hidden lg:block text-center mt-2">
+    <p className={`text-xl font-bold ${
+      isDarkMode ? 'text-white' : 'text-slate-900'
+    }`}>{day.day}</p>
+  </div>
+</div>
+          
+          {/* Day & Date for mobile */}
+          <div>
+           
+            {day.day} - {new Date(2025, 0, 13 + dayIndex).toLocaleDateString('en-US', { 
+              month: 'short', 
+              day: 'numeric' 
+            })}
+          </div>
+
+          {/* Events Card */}
+          <div className={`rounded-xl border transition-all duration-300 transform p-6 w-full lg:w-5/12 ${
+            isDarkMode
+              ? 'bg-slate-800/50 border-purple-500/30'
+              : 'bg-white/90 border-purple-200 backdrop-blur-sm'
+          } lg:odd:pr-12 lg:even:pl-12`}>
+            <ul className="space-y-4">
+              {day.events.map((event, eventIndex) => (
+                <li key={eventIndex} className="flex items-center space-x-3">
+                  <div className={`p-1 rounded-full flex-shrink-0 ${
+                    isDarkMode ? 'bg-purple-600/30' : 'bg-purple-200'
+                  }`}>
+                    <div className={`w-2 h-2 rounded-full ${
+                      isDarkMode ? 'bg-purple-400' : 'bg-purple-600'
+                    }`}></div>
+                  </div>
+                  <div>
+                    <p className={`text-sm font-medium ${
+                      isDarkMode ? 'text-purple-300' : 'text-purple-700'
+                    }`}>{event.time}</p>
+                    <p className={`font-semibold ${
+                      isDarkMode ? 'text-gray-200' : 'text-gray-800'
+                    }`}>{event.event}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</motion.section>
 
       {/* Sponsors & Contact Section */}
       <section 
