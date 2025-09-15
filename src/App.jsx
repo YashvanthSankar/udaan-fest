@@ -833,22 +833,16 @@ function App() {
           className="relative lg:flex items-start lg:odd:flex-row-reverse"
           variants={fadeInUp}
         >
-          {/* Day & Date Circle */}
-<div className="flex flex-col items-center absolute -left-4 top-0 w-12 h-auto rounded-full z-10 lg:static lg:w-24 lg:h-24 lg:mx-auto lg:order-2 lg:flex-shrink-0">
-  <div className={`text-white rounded-full w-10 h-10 flex items-center justify-center font-bold transition-colors mb-2 ${
-    isDarkMode 
-      ? 'bg-gradient-to-br from-purple-600 to-pink-600' 
-      : 'bg-gradient-to-br from-purple-500 to-pink-500'
-  } lg:w-16 lg:h-16 lg:mb-0`}>
-    {day.day.charAt(0)}
+          {/* Day Pill */}
+<div className="relative z-10 lg:static lg:order-2 lg:flex-shrink-0 lg:mx-auto">
+  <div className={`flex items-center justify-center py-2 px-6 rounded-full font-bold shadow-lg transform transition-colors duration-300 -left-4 lg:w-auto lg:h-auto ${
+    isDarkMode
+      ? 'bg-gradient-to-br from-purple-600 to-pink-600 text-white'
+      : 'bg-gradient-to-br from-purple-500 to-pink-500 text-white'
+  }`}>
+    <span className="text-xl lg:text-2xl">{day.day}</span>
   </div>
-  <div className="block text-center">
-    <p className={`text-xs font-bold ${
-      isDarkMode ? 'text-white' : 'text-slate-900'
-    }`}>{day.day} - {new Date(2025, 0, 13 + dayIndex).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</p>
-  </div>
-</div>
-          
+</div>   
           {/* Day & Date for mobile */}
           <div>
            
