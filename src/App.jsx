@@ -1075,7 +1075,7 @@ function App() {
             <p className={`mb-4 md:mb-0 ${
               isDarkMode ? 'text-gray-300' : 'text-gray-300'
             }`}>
-              © 2025 UDAAN Fest | IIITDM Kancheepuram | All Rights Reserved.
+              <span style={{fontSize: '2.2em', verticalAlign: 'middle'}}>©</span> 2025 UDAAN Fest | IIITDM Kancheepuram | All Rights Reserved.
             </p>
             <div className="flex space-x-4">
               <a 
